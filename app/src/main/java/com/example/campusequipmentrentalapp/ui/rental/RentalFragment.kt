@@ -97,7 +97,7 @@ class RentalFragment : Fragment(R.layout.fragment_rental) {
             val bundle = Bundle().apply {
                 putInt(NavKeys.EQUIPMENT_ID, equipment.id)
                 putString(NavKeys.APPLICANT_NAME, applicantName)
-                putString(NavKeys.STUDENT_ID, studentId)
+                putString(NavKeys.USER_LOGIN_ID, studentId)
                 putString(NavKeys.PURPOSE, purpose)
                 putInt(NavKeys.RENTAL_DAYS, rentalDays)
             }

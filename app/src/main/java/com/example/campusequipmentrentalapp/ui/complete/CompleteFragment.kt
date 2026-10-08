@@ -38,7 +38,7 @@ class CompleteFragment : Fragment(R.layout.fragment_complete) {
         val equipmentId = arguments?.getInt(NavKeys.EQUIPMENT_ID, -1) ?: -1
         val equipment = EquipmentRepository.findById(equipmentId)
         val applicantName = arguments?.getString(NavKeys.APPLICANT_NAME).orEmpty()
-        val studentId = arguments?.getString(NavKeys.STUDENT_ID).orEmpty()
+        val userId = arguments?.getString(NavKeys.USER_LOGIN_ID).orEmpty()
         val purpose = arguments?.getString(NavKeys.PURPOSE).orEmpty()
         val rentalDays = arguments?.getInt(NavKeys.RENTAL_DAYS, 1) ?: 1
 
@@ -53,7 +53,7 @@ class CompleteFragment : Fragment(R.layout.fragment_complete) {
         )
         binding.tvCompleteStudentId.text = getString(
             R.string.complete_student_id_format,
-            studentId
+            userId
         )
         binding.tvCompletePeriod.text = getString(
             R.string.complete_period_format,

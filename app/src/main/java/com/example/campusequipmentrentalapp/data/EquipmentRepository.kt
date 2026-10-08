@@ -87,10 +87,29 @@ object EquipmentRepository {
             location = "학과 사무실",
             description = "소규모 행사와 프로젝트 시연에 사용할 수 있는 Bluetooth 스피커입니다."
         ),
-
-
-
+        Equipment(
+            id = 9,
+            name = "DSLR 카메라",
+            category = "촬영",
+            icon = "📸",
+            status = RentalStatus.AVAILABLE,
+            maxRentalDays = 3,
+            location = "미디어관 605호",
+            description = "고화질 사진 및 영상 촬영에 사용할 수 있는 입문용 DSLR 카메라입니다."
+        ),
+        Equipment(
+            id = 10,
+            name = "보조배터리",
+            category = "전원",
+            icon = "🔋",
+            status = RentalStatus.AVAILABLE,
+            maxRentalDays = 1,
+            location = "학과 사무실",
+            description = "야외 촬영이나 대여 장비 충전에 사용할 수 있는 대용량   보조배터리입니다."
+        )
     )
+
+
     fun findById(id:Int) : Equipment ?= equipmentList.find{ equipment -> equipment.id == id}
 
 
